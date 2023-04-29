@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "First Product Description",
+    "quantity": 8,
+    "version": 1
+  },
+  {
+    "id": 2,
+    "name": "Second Product Description",
+    "quantity": 10,
+    "version": 1
+  }
+]

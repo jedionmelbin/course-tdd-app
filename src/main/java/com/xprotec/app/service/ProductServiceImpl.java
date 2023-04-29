@@ -18,12 +18,13 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Iterable<Product> findAll() {
-        return null;
+        return productRepository.findAll();
     }
 
     @Override
     public Product findById(Integer id) {
-        return null;
+        LOGGER.info("FINDING product by id: {}", id);
+        return productRepository.findProductById(id);
     }
 
     @Override
@@ -37,12 +38,12 @@ public class ProductServiceImpl implements ProductService {
     public Product update(Product product) {
         LOGGER.info("Updating product with id {} ", product.getId());
         Product exitProduct = productRepository.findProductById(product.getId());
-        if (exitProduct!=null){
+        if (exitProduct != null) {
             exitProduct.setName(product.getName());
             exitProduct.setDescription(product.getDescription());
             exitProduct.setQuantity(product.getQuantity());
             exitProduct = productRepository.save(exitProduct);
-        }else {
+        } else {
             LOGGER.error("PRODUCT with id {}", product.getId());
         }
         return exitProduct;
@@ -50,6 +51,10 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public void delete(Product product) {
-
+        LOGGER.info("Deleting product with id {} ", product.getId());
+        Product exitProduct = productRepository.findProductById(product.getId());
+        if (exitProduct != null) {
+            productRepository.delete(exitProduct);
+        }
     }
 }
