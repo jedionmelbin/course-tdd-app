@@ -23,7 +23,7 @@ import static org.mockito.Mockito.doReturn;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
-class ProductServiceImplTest {
+class DefaultProductServiceTest {
 
     @Autowired
     private ProductService productService;

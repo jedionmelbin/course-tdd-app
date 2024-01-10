@@ -2,11 +2,11 @@ package com.xprotec.app.document;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.mongodb.core.mapping.Document;
+//import org.springframework.data.mongodb.core.mapping.Document;
 
 @Getter
 @Setter
-@Document(collation = "Feedback")
+//@Document(collation = "Feedback")
 public class Feedback {
     private String id;
     private String productId;

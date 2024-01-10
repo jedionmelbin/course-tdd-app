@@ -8,10 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ProductServiceImpl implements ProductService {
+public class DefaultProductService implements ProductService {
 
     // MockMVC Execute HTTP Request, Validate HTTP Headers, Validate HTTP Body, Validate HTTP Response
-    private static final Logger LOGGER = LoggerFactory.getLogger(ProductServiceImpl.class);
+    /*private static final Logger LOGGER = LoggerFactory.getLogger(DefaultProductService.class);
 
     @Autowired
     private ProductRepository productRepository;
@@ -56,5 +56,30 @@ public class ProductServiceImpl implements ProductService {
         if (exitProduct != null) {
             productRepository.delete(exitProduct);
         }
+    }*/
+
+    @Override
+    public Iterable<Product> findAll() {
+        return null;
+    }
+
+    @Override
+    public Product findById(Integer id) {
+        return null;
+    }
+
+    @Override
+    public Product save(Product product) {
+        return null;
+    }
+
+    @Override
+    public Product update(Product existProduct) {
+        return null;
+    }
+
+    @Override
+    public void delete(Product product) {
+
     }
 }
